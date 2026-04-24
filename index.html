@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Aqilla Habibatuz Z</title>
+    <title>Portofolio | Video - Aqilla Habibatuz Z</title>
     <style>
         /* SCROLLBAR TEMA SPIDER-MAN */
         ::-webkit-scrollbar { width: 12px; }
@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-image: url("https://i.pinimg.com/736x/61/08/0a/61080a7823fb35f04544aa7b599ff5c1.jpg");
+            background-image: url("https://i.pinimg.com/736x/a7/25/93/a725938895e75121afc01d7ff2ecf71a.jpg");
             background-attachment: fixed;
             background-size: cover;
             margin: 0;
@@ -22,61 +22,6 @@
             color: #333;
             cursor: crosshair;
         }
-
-        /* --- MOUSE TRAIL SMOOTH --- */
-        .trail {
-            position: fixed; width: 8px; height: 8px; background: #fcc21c;
-            border-radius: 50%; pointer-events: none; z-index: 999999;
-            box-shadow: 0 0 10px #E62429, 0 0 20px #fcc21c;
-            transition: transform 0.1s ease-out; will-change: transform;
-        }
-
-        /* SPIDER INTRO */
-        #spider-intro {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, #0a0c14 0%, #000 100%); 
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            z-index: 99999; cursor: pointer; transition: all 1s cubic-bezier(0.9, 0, 0.1, 1);
-            overflow: hidden;
-        }
-        #spider-intro.hide { opacity: 0; visibility: hidden; transform: scale(1.2); }
-
-        /* Jaring Laba-laba - PUTARAN LEBIH CEPAT (40s) */
-        .web-bg {
-            position: absolute; 
-            width: 250vmax; 
-            height: 250vmax;
-            background: 
-                /* Garis Lingkaran */
-                repeating-radial-gradient(
-                    circle at center,
-                    transparent 0,
-                    transparent 43px,
-                    rgba(255, 255, 255, 0.08) 44px,
-                    transparent 45px
-                ),
-                /* Garis Menjari */
-                repeating-conic-gradient(
-                    from 0deg,
-                    transparent 0deg,
-                    transparent 14.8deg,
-                    rgba(255, 255, 255, 0.08) 15deg,
-                    transparent 15.2deg
-                );
-            filter: blur(0.3px);
-            animation: rotateWeb 40s linear infinite; /* Kecepatan ditingkatkan */
-            pointer-events: none;
-        }
-        @keyframes rotateWeb { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-        /* MATA TANPA OVAL (CLEAN) */
-        .eyes-container { display: flex; gap: 30px; z-index: 10; filter: drop-shadow(0 0 30px #E62429); }
-        .eye-v2 { width: 140px; height: 180px; background: white; border: 10px solid #E62429; transition: 0.3s; position: relative; }
-        .eye-v2.left { border-radius: 20% 100% 20% 100%; transform: rotate(-10deg); }
-        .eye-v2.right { border-radius: 100% 20% 100% 20%; transform: rotate(10deg); }
-
-        .intro-text { z-index: 10; text-align: center; margin-top: 40px; font-family: 'Arial Black'; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 
         /* HEADER & NAV */
         header {
@@ -102,81 +47,147 @@
 
         /* CONTAINER UTAMA */
         .container {
-            width: 90%; max-width: 1250px; margin: 40px auto; 
+            width: 90%; max-width: 1000px; margin: 40px auto; 
             background: rgba(250, 250, 250, 0.95); padding: 40px; border-radius: 20px; 
             box-shadow: 0 20px 50px rgba(0,0,0,0.6); backdrop-filter: blur(10px);
             border: 4px solid #1c2870; position: relative;
         }
-        .container::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(rgba(28, 40, 112, 0.1) 2px, transparent 2px);
-            background-size: 30px 30px; border-radius: 16px; pointer-events: none; z-index: 0;
-        }
 
-        .content-grid { display: grid; grid-template-columns: 1.4fr 1.1fr; gap: 50px; align-items: start; position: relative; z-index: 1; }
-
-        .content-text h2 { 
+        .container h2 {
             background: #1c2870; color: #fcc21c; padding: 8px 20px; 
-            display: inline-block; margin-top: 30px; margin-bottom: 10px;
+            display: inline-block; margin-top: 25px; margin-bottom: 15px;
             transform: skewX(-10deg); box-shadow: 5px 5px 0 #E62429;
             text-transform: uppercase; letter-spacing: 1px; border: 2px solid #fff;
         }
+
         .text-box {
             background: rgba(255, 255, 255, 0.8); border-left: 5px solid #E62429;
             padding: 15px 20px; margin-bottom: 20px; border-radius: 0 10px 10px 0;
             box-shadow: 2px 5px 10px rgba(0,0,0,0.05); transition: 0.3s;
         }
-        .text-box:hover { background: #fff; transform: translateX(5px); box-shadow: 5px 5px 15px rgba(230, 36, 41, 0.15); }
 
-        /* SKILLS STATS */
-        .stats-box { background: #1c2870; color: white; padding: 25px; border-radius: 15px; margin-top: 30px; border: 3px solid #fcc21c; }
-        .stats-box h3 { color: #fcc21c; margin-top: 0; font-family: 'Arial Black'; text-transform: uppercase; letter-spacing: 2px; }
-        .stat-bar { width: 100%; background: rgba(255,255,255,0.2); height: 12px; border-radius: 10px; overflow: hidden; margin-top: 5px; }
-        .stat-fill { height: 100%; background: linear-gradient(90deg, #E62429, #fcc21c); border-radius: 10px; box-shadow: 0 0 10px #fcc21c; }
-
-        /* POLAROID STACK */
-        .polaroid-stack { position: sticky; top: 100px; height: 600px; display: flex; justify-content: center; align-items: center; }
-        .helper-text {
-            position: absolute; top: -20px; right: 0; z-index: 1000;
-            font-family: 'Arial Black', sans-serif; font-size: 0.9rem; color: #1c2870;
-            background: #fcc21c; padding: 8px 15px; border-radius: 30px; 
-            box-shadow: 3px 3px 0 #E62429; border: 2px solid #fff; animation: bounce 2s infinite;
+        .more-text { display: none; }
+        .read-more-btn {
+            background: none; border: none; color: #E62429; font-weight: bold;
+            cursor: pointer; padding: 5px 0; font-size: 0.9rem; display: block;
+            margin-top: 5px; text-decoration: underline;
         }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-        .p-wrapper { position: absolute; transition: all 0.4s ease; cursor: zoom-in; }
-        .polaroid { width: 220px; height: 320px; background: white; padding: 15px; box-shadow: 5px 15px 25px rgba(0,0,0,0.4); border: 1px solid #ddd; display: flex; flex-direction: column; transition: 0.4s; }
-        .polaroid img { width: 100%; height: 100%; object-fit: cover; border: 2px solid #1c2870; }
-        
-        .p1 { transform: rotate(-8deg) translate(-30px, -20px); }
-        .p2 { transform: rotate(5deg) translate(30px, 10px); }
-        .p3 { transform: rotate(-3deg) translate(-10px, -30px); }
-        .p-wrapper:hover { z-index: 100; }
-        .p-wrapper:hover .polaroid { transform: rotate(0deg) scale(1.15); box-shadow: 0 0 25px #fcc21c; }
-
-        /* VINYL DECK */
-        .vinyl-deck {
-            background: linear-gradient(145deg, #1c2870, #0b0d17);
-            border-radius: 20px; padding: 40px; margin-top: 60px;
-            box-shadow: inset 0 0 30px rgba(230, 36, 41, 0.5), 0 15px 30px rgba(0,0,0,0.5);
-            border: 4px solid #fcc21c; text-align: center; position: relative; z-index: 10;
+        /* --- LAPTOP STYLES --- */
+        .laptop-container {
+            perspective: 1500px;
+            width: 100%;
+            max-width: 700px;
+            margin: 60px auto;
+            position: relative;
         }
-        .vinyl-deck h3 { color: #fff; font-family: 'Arial Black'; margin-bottom: 20px; text-shadow: 2px 2px #E62429; }
-        
-        .cd-image { 
-            width: 200px; height: 200px; cursor: pointer; border-radius: 50%; 
-            object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.8); 
-            transition: all 0.3s; border: 8px solid #222;
-        }
-        .cd-image.playing { animation: spinCD 4s linear infinite; border: 8px solid #fcc21c; }
-        @keyframes spinCD { 100% { transform: rotate(360deg); } }
 
-        /* ZOOM MODAL */
-        .zoom-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 13, 23, 0.95); display: none; justify-content: center; align-items: center; z-index: 100000; cursor: zoom-out; }
-        .zoom-overlay.active { display: flex; }
-        .zoom-overlay img { max-width: 90%; max-height: 85%; border: 10px solid #fcc21c; border-radius: 10px; }
+        .laptop-lid {
+            width: 100%;
+            height: 400px;
+            background: #222;
+            border: 8px solid #1c2870;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(230, 36, 41, 0.3);
+        }
+
+        .laptop-lid::before {
+            content: '🕸️';
+            font-size: 80px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotateX(180deg);
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+        .laptop-container.open .laptop-lid {
+            transform: rotateX(0deg);
+        }
+
+        .laptop-container.open .laptop-lid::before {
+            opacity: 0;
+        }
+
+        .laptop-screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+        }
+
+        .laptop-container.open .laptop-screen {
+            opacity: 1;
+        }
+
+        .laptop-screen iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .laptop-base {
+            width: 110%;
+            height: 20px;
+            background: #1c2870;
+            margin-left: -5%;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .laptop-base::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100px; height: 8px;
+            background: #E62429;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .laptop-hint {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fcc21c;
+            color: #1c2870;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
+            border: 2px solid #E62429;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -10px); }
+        }
 
         footer { background: #0b0d17; color: #fcc21c; text-align: center; padding: 30px; border-top: 6px solid #E62429; font-weight: bold; }
+
+        .trail {
+            position: fixed; width: 8px; height: 8px;
+            background: #fcc21c; border-radius: 50%;
+            pointer-events: none; z-index: 99999;
+            transition: transform 0.1s ease-out;
+            box-shadow: 0 0 10px #E62429;
+        }
     </style>
 </head>
 <body>
@@ -185,118 +196,70 @@
         <source src="musik.mp3" type="audio/mpeg">
     </audio>
 
-    <div id="spider-intro" onclick="closeIntro()">
-        <div class="web-bg"></div>
-        <div class="eyes-container">
-            <div class="eye-v2 left"></div>
-            <div class="eye-v2 right"></div>
-        </div>
-        <div class="intro-text">
-            <h1 style="color: #E62429; font-size: 4rem; margin: 0; text-shadow: 3px 3px #fff;">WELCOME</h1>
-            <p style="color: #fcc21c; letter-spacing: 5px;">AQILLA'S MULTIVERSE</p>
-            <div style="color: #1c2870; background: #fcc21c; padding: 12px 25px; border-radius: 50px; font-weight: bold; margin-top: 20px; animation: pulse 1.5s infinite;">
-                TAP TO SWING IN 🕸️
-            </div>
-        </div>
-    </div>
-
     <header>
         <h1>PORTOFOLIO AQILLA HABIBATUZ Z</h1>
         <p>Karya Nyata dari Proses Belajar • SMPIT Al Haraki</p>
     </header>
 
     <nav>
-        <a href="#home">Beranda</a>
+        <a href="index.html">Beranda</a>
         <a href="profil.html">Profil</a>
         <a href="video.html">Video</a>
         <a href="project.html">My Project</a>
     </nav>
 
-    <div class="container" id="home">
-        <div class="content-grid">
-            <div class="content-text">
-                <h2>🕸️ Selamat Datang</h2>
-                <div class="text-box">
-                    <p>Website ini merupakan media pendukung untuk menampilkan hasil Ujian Praktik Terintegrasi. Konten utama pada website ini adalah video broadcasting pembelajaran yang berisi penyampaian teks argumentasi secara lisan.</p>
-                </div>
-
-                <h2>📚 Tentang Website</h2>
-                <div class="text-box">
-                    <p>Website ini merupakan website portofolio digital yang berisi hasil karya dan pembelajaran saya selama mengikuti Ujian Praktik Terintegrasi.</p>
-                </div>
-
-                <h2>🎯 Tujuan Pembuatan</h2>
-                <div class="text-box">
-                    <p>  Tujuan pembuatan website ini adalah untuk menampilkan karya
-                    yang telah saya buat serta melatih kemampuan saya dalam
-                    membuat website sederhana menggunakan HTML.</p>
-                </div>
-
-                <h2>💡 Topik Argumentasi</h2>
-                <div class="text-box" style="background: rgba(252, 194, 28, 0.2); border-color: #1c2870;">
-                    <p><i>Topik yang akan saya bahas adalah dampak nyata yang akan didapatkan setelah melakukan Intership Curriculum ke D'Kandang Amazing Farm. Sebelum melakukan kegiatan IC, saya melihat banyak permasalahan terutama dalam sektor ekonomi dan kesejahteraan yang ada di Indonesia. Saya tertarik untuk menganalisis dampak nyata dari program magang yang dilakukan oleh sekumpulan anak SMP dalam kehidupan dirinya dan bangsa di masa sekarang maupun di masa depan.</i></p>
-                </div>
-
-                <h2>🚀 Harapan</h2>
-                <div class="text-box">
-                    <p><i> Melihat permasalahan sulitnya mencari kerja di Indonesia, maka saya berharap penonton bisa termotivasi untuk ikut mempersiapkan diri sejak remaja sebelum masuk ke dunia kerja. saya harap penonton mampu meningkatkan kemampuan, pengalaman, dan kesediaan serta mulai membangun portofolio diri.</i></p>
-                </div>
-
-                <h2>💭 Refleksi, Pesan dan Kesan</h2>
-                <div class="text-box">
-                    <p><i>"Dari ujian praktek, saya belajar bahwa tidak segala hal bisa dinilai hanya dari angka di kertas tapi juga dari sikap pekerja keras, bertanggung jawab,
-dan menejemen waktu. saya juga belajar bahwa keahlian dan kesenangan seseorang tidak hanya ada di pelajaran eksak yang menggunakan ilmu pasti saja namun juga di bidang yang menggunakan otak untuk kreativitas, ide dan keterampilan tangan. 
-                        <br>
-                        
-                        Dan selama duduk di bangku kelas IX saya belajar bahwa segala sesuatu ada waktunya, ada waktu main dan ada waktu belajar, dari situ saya belajar untuk mengelola waktu, stress, dan keseimbangan hidup antara nilai dan kesenangan pribadi. Saya merasa di kelas IX ada sangat banyak ujian yang dilaksanakan, karenanya saya lebih termotivasi untuk belajar lebih tekun."</i></p>
-                </div>
-
-                <div class="stats-box">
-                    <h3>⚡ Spidey Stats / Skills</h3>
-                    <div class="stat-item">
-                        <span class="stat-name">Public Speaking</span>
-                        <div class="stat-bar"><div class="stat-fill" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-name">Creative Thinking</span>
-                        <div class="stat-bar"><div class="stat-fill" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-name">Time Management</span>
-                        <div class="stat-bar"><div class="stat-fill" style="width: 95%;"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="polaroid-stack">
-                <div class="helper-text">CLICK TO ZOOM! 🔍</div>
-                <div class="p-wrapper pw1">
-                    <div class="polaroid p1" onclick="openZoom('https://i.pinimg.com/736x/3d/e8/8c/3de88c9738e6d59ca363d7c0f1729813.jpg')">
-                        <img src="https://i.pinimg.com/736x/3d/e8/8c/3de88c9738e6d59ca363d7c0f1729813.jpg" alt="Foto 1">
-                    </div>
-                </div>
-                <div class="p-wrapper pw2">
-                    <div class="polaroid p2" onclick="openZoom('https://i.pinimg.com/736x/3e/68/72/3e6872ddb2082180dbc9d447db37d806.jpg')">
-                        <img src="https://i.pinimg.com/736x/3e/68/72/3e6872ddb2082180dbc9d447db37d806.jpg" alt="Foto 2">
-                    </div>
-                </div>
-                <div class="p-wrapper pw3">
-                    <div class="polaroid p3" onclick="openZoom('https://i.pinimg.com/736x/56/b1/e0/56b1e0c631d49b7afb083c9ff93afca3.jpg')">
-                        <img src="https://i.pinimg.com/736x/56/b1/e0/56b1e0c631d49b7afb083c9ff93afca3.jpg" alt="Foto 3">
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        
+        <h2>Video Argumentasi</h2>
+        <div class="text-box">
+            <p>Vidio ini merupakan hasil karya broadcasting saya yang menyampaikan argumen serta faktanya. Saya memberikan fakta dari sumber terpercaya sekaligus dari lapangan. Saya membahas topik "efektif kah magang sejak SMP? atau malah membuang-buang waktu saja?". 
+                <span class="more-text">Dalam prosesnya, saya melakukan berbagai riset mulai dari tujuan negara Indonesia sampai bagaimana program IC bisa menjadi salah satu jalan keluar dari permasalahan yang menyebabkan Indonesia belum maju yaitu tingginya angka pengangguran di Indonesia. Saya akan membahas manfaat yang saya dapatkan mulai dari ilmu, kemampuan, dan pengembangan karakter dalam diri saya sendiri.</span>
+            </p>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More...</button>
         </div>
 
-        <div class="vinyl-deck">
-            <h3>🎧 SPIDER-VERSE SOUNDTRACK DECK 🎧</h3>
-            <img id="vinylDisc" src="ssp.png" alt="Play Music" class="cd-image" onclick="toggleMusic()">
-            <p style="color: #fcc21c; margin-top: 15px; font-weight: bold;">Tap Vinyl to Play / Pause</p>
+        <div class="laptop-container" id="spideyLaptop">
+            <div class="laptop-hint" id="hint" onclick="openLaptop()">CLICK TO OPEN LAPTOP 🕸️</div>
+            <div class="laptop-lid">
+                <div class="laptop-screen">
+                    <iframe 
+                        id="videoFrame"
+                        src="https://www.youtube.com/embed/iupk14LHg7k?si=aH5Eha6Ih3DIiXcg" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="laptop-base"></div>
         </div>
-    </div>
 
-    <div id="zoomOverlay" class="zoom-overlay" onclick="closeZoom()">
-        <img id="zoomedImg" src="" alt="Zoomed View">
+        <h2>Topik yang Diangkat</h2>
+        <div class="text-box">
+            <p>Vidio ini mengangkat persoalan krusial penghambat visi Indonesia Emas 2045 dalam konteks ekonomi yaitu masalah pengangguran dan kemiskinan.
+                <span class="more-text">Disini saya akan membahas tentang salah satu program unggulan SMPIT Al Haraki yang dapat membentuk generasi pemimpin dimasa depan untuk memberantas isu pengangguran dan kemiskinan. Saya juga membahas bagaimana IC bisa menghindari siswa dari kesenjangan kemampuan <i>(Skill Gap)</i>. Dengan begitu siswa dapat membekali diri untuk menjadi <i> Agent of change </i> yaitu agen yang membawa perubahan bagi bangsanya.</span>
+            </p>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More...</button>
+        </div>
+
+        <h2>Alasan Memilih Topik</h2>
+        <div class="text-box">
+            <p>Kehadiran program magang bagi anak SMP bukanlah sesuatu yang familiar. 
+                <span class="more-text">Saya penasaran bagaimana sebuah program magang bagi anak SMP bisa mengubah nasib negara di masa depan. Saya ingin menilai dampak dan manfaat dari program ini. Saya juga ingin membagikan pengalaman sehingga dapat menginspirasi orang lain untuk sama sama membekali diri dengan kemampuan dan ilmu yang cukup.</span>
+            </p>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More...</button>
+        </div>
+
+        <h2>Pesan dan Harapan</h2>
+        <div class="text-box">
+            <p>Saya merasakan manfaat nyata dari program Internship Curriculum dan melihat inovasi dari SMPIT Al Haraki. 
+                <span class="more-text">Saya harap lebih banyak sekolah terinspirasi untuk menghadirkan program magang serupa. Dengan membekali pelajar skill dunia nyata, kita berkontribusi langsung dalam menanggulangi masalah kemiskinan dan pengangguran di Indonesia di masa depan. Saya harap penonton juga merasa termotivasi untuk ikut melakukan kegiatan magang sejak sekarang.</span>
+            </p>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More...</button>
+        </div>
+
     </div>
 
     <footer>
@@ -304,55 +267,29 @@ dan menejemen waktu. saya juga belajar bahwa keahlian dan kesenangan seseorang t
     </footer>
 
     <script>
-        // LOGIKA BARU: Cek status intro saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', function() {
-            const introSeen = sessionStorage.getItem('introSeen');
-            const introElement = document.getElementById('spider-intro');
-            
-            if (introSeen) {
-                // Jika sudah pernah lihat di sesi ini, hapus intro dari tampilan
-                introElement.style.display = 'none';
+        function openLaptop() {
+            const laptop = document.getElementById('spideyLaptop');
+            const hint = document.getElementById('hint');
+            if(!laptop.classList.contains('open')) {
+                laptop.classList.add('open');
+                hint.style.opacity = '0';
+                setTimeout(() => { hint.style.display = 'none'; }, 500);
             }
-        });
-
-        function closeIntro() { 
-            // Simpan status agar intro tidak muncul lagi di sesi ini
-            sessionStorage.setItem('introSeen', 'true');
-            
-            const introElement = document.getElementById('spider-intro');
-            introElement.classList.add('hide'); 
-            
-            // Hapus elemen sepenuhnya setelah animasi selesai agar tidak menghalangi klik
-            setTimeout(() => {
-                introElement.style.display = 'none';
-            }, 1000);
         }
 
-        let isPlaying = false;
-        function toggleMusic() {
-            let music = document.getElementById('bgMusic');
-            let vinyl = document.getElementById('vinylDisc');
-            if (isPlaying) {
-                music.pause();
-                vinyl.classList.remove('playing');
+        function toggleReadMore(btn) {
+            const moreText = btn.parentElement.querySelector('.more-text');
+            if (moreText.style.display === "inline") {
+                moreText.style.display = "none";
+                btn.innerHTML = "Read More...";
             } else {
-                music.volume = 0.5;
-                music.play();
-                vinyl.classList.add('playing');
+                moreText.style.display = "inline";
+                btn.innerHTML = "Read Less";
             }
-            isPlaying = !isPlaying;
         }
 
-        function openZoom(url) {
-            document.getElementById('zoomedImg').src = url;
-            document.getElementById('zoomOverlay').classList.add('active');
-        }
-        function closeZoom() { document.getElementById('zoomOverlay').classList.remove('active'); }
-
-        // --- MOUSE TRAIL ---
         const dots = [];
-        const trailCount = 12;
-        for (let i = 0; i < trailCount; i++) {
+        for (let i = 0; i < 10; i++) {
             const dot = document.createElement('div');
             dot.className = 'trail';
             document.body.appendChild(dot);
@@ -360,7 +297,6 @@ dan menejemen waktu. saya juga belajar bahwa keahlian dan kesenangan seseorang t
         }
         let mouseX = 0, mouseY = 0;
         document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
-
         function animateTrail() {
             let x = mouseX, y = mouseY;
             dots.forEach((dot, index) => {
@@ -368,8 +304,7 @@ dan menejemen waktu. saya juga belajar bahwa keahlian dan kesenangan seseorang t
                 dot.y += (y - dot.y) * 0.35;
                 dot.el.style.left = dot.x + 'px';
                 dot.el.style.top = dot.y + 'px';
-                const scale = (trailCount - index) / trailCount;
-                dot.el.style.transform = `scale(${scale})`;
+                dot.el.style.transform = `scale(${(10 - index) / 10})`;
                 x = dot.x; y = dot.y;
             });
             requestAnimationFrame(animateTrail);
